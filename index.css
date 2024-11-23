@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: white;
+    overflow-x: hidden;
+    background-color: #111315;
+    /* Prevent horizontal scrolling */
+}
+
+.menu,
+.poster {
+    background-color: #111315;
+
+}
+
+.main_container {
+    height: 100vh;
+    /* Ensure full viewport height */
+    display: flex;
+    background-color: #111315;
+}
+
+.left_container {
+    height: 100%;
+    /* Full height of the viewport */
+    width: 25%;
+    background-color: black;
+    overflow-y: auto;
+    /* Allow scrolling if content overflows */
+    position: sticky;
+    top: 0;
+    /* Stick to the top while scrolling */
+    line-height: 24px;
+
+}
+
+.left_container::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and newer versions of Edge */
+}
+
+.main_container_items::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, and newer versions of Edge */
+}
+
+.image_container {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.image_container img {
+    height: 200px;
+}
+
+.image_container h3 {
+    font-size: 18px;
+}
+
+.image_container h4 {
+    color: red;
+    padding-bottom: 10px;
+}
+
+h3 {
+    padding: 10px;
+    text-align: center;
+}
+
+.list1_container,
+.list2_container {
+    margin-top: 2px;
+    padding: 0px 20px;
+    background-color: black;
+    padding-bottom: 30px;
+}
+
+ol {
+    padding-left: 15px;
+    padding-bottom: 10px;
+}
+
+ol li {
+    padding: 1px;
+}
+
+.right_container {
+    flex: 1;
+    /* Take remaining width */
+    height: 100%;
+    /* Full height */
+    background: rgba(25, 29, 32, 1);
+    display: flex;
+    flex-direction: column;
+    /* Stack elements (nav + content) */
+}
+
+nav {
+    background: rgba(25, 29, 32, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav input {
+    width: 75%;
+    padding: 8px;
+    margin: 5px;
+    background: rgba(39, 42, 48, 1);
+    border-radius: 5px;
+    border: none;
+}
+
+i {
+    position: relative;
+    left: 30px;
+    align-content: center;
+    top: -1px;
+    color: rgba(135, 135, 135, 1);
+}
+
+::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    padding-left: 25px;
+    align-content: center;
+}
+
+.btn {
+    background: rgba(255, 36, 36, 1);
+    border-radius: 5px;
+    padding: 8px 20px;
+    color: rgba(245, 245, 245, 1);
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.poster {
+    /* margin: 10px 0; */
+    margin-top: 10px;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    /* Ensure image doesn't overflow */
+}
+
+.poster img {
+    margin-top: 15px;
+    width: 98%;
+    height: 90%;
+    /* object-fit: cover; */
+    margin: 10px;
+}
+
+.menu {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.main_container_items {
+    height: 100%;
+    flex: 1;
+    /* Take available height for scrolling */
+    overflow-y: auto;
+    /* Enable scrolling for items */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* Space between cards */
+    justify-content: space-between;
+    /* Align cards to the left */
+    background-color: #111315;
+    /* Matches theme */
+}
+
+.card {
+    height: 320px;
+    width: calc(33.333% - 20px);
+    /* Three cards per row with spacing */
+    background: rgba(39, 42, 48, 1);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item_img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.card_details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.item_desc {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.item_price {
+    font-size: 14px;
+    color: #bbb;
+}
+
+.add_to_cart {
+    background-color: #363A43;
+    color: #878787;
+    border-radius: 5px;
+    font-weight: 400;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
